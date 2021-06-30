@@ -1,0 +1,11 @@
+version: "3.3"
+services:
+  blog-server:
+    container_name: blog_mongo
+    image: mongo
+    environment: 
+        - PUID=1000
+        - PGID=1000
+    restart: always
+    ports:
+      - 27017:27017
